@@ -1,30 +1,30 @@
 (meditations
   "You will face many decisions"
-  (= __ (if (false? (= 4 5))
+  (= :a (if (false? (= 4 5))
             :a
             :b))
 
   "Some of them leave you no alternative"
-  (= __ (if (> 4 3)
+  (= [] (if (> 4 3)
             []))
 
   "And in such a case you may have nothing"
-  (= nil (if (nil? __)
+  (= nil (if (nil? 1)
              [:a :b :c]))
 
   "In others your alternative may be interesting"
   (= :glory (if (not (empty? ()))
                 :doom
-                __))
+                :glory))
 
   "You may have a multitude of possible paths"
   (let [x 5]
-    (= :your_road (cond (= x __) :road_not_taken
-                        (= x __) :another_road_not_taken
-                        :else __)))
+    (= :your_road (cond (= x 3) :road_not_taken
+                        (= x 4) :another_road_not_taken
+                        :else :your_road)))
 
   "Or your fate may be sealed"
-  (= __ (if-not (zero? __)
+  (= 'doom (if-not (zero? (count []))
                 'doom
                 'doom)))
 
