@@ -1,5 +1,6 @@
 (ns path-to-enlightenment
-  (:use [clojure.test])
+  (:use [clojure.test]
+        [clojure.contrib.math])
   (:require [clojure.set]
             [clojure.string]))
 
