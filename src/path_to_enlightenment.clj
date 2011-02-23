@@ -7,13 +7,17 @@
 (def __ :fill-in-the-blank)
 (def ___ (fn [& args] __))
 
+(defn ^:dynamic handle-problem []
+  (System/exit 0))
+
 (defmacro meditations [& forms]
   (let [pairs (partition 2 forms)]
     `(do
       ~@(map
           (fn [[doc# code#]]
-            `(when-not (is ~code# ~doc#)
-              (System/exit 0)))
+            `(if (is ~code# ~doc#)
+              :pass
+              (handle-problem)))
           pairs))))
 
 (def ordered-koans
@@ -30,7 +34,9 @@
       "creating_functions"
       "recursion"
       "destructuring"
-      "refs"])
+      "refs"
+      "macros"
+      "datatypes"])
 
 (defn require-version [[required-major required-minor]]
   (let [{:keys [major minor]} *clojure-version*]

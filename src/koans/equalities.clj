@@ -18,4 +18,4 @@
   (== 2.0 2 2.00)
 
   "When things cannot be equal, they must be different"
-  (not= nil false))
+  (not= :fill-in-the-blank false))

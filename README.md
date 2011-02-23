@@ -7,13 +7,25 @@ making tests pass!
 
 ### Getting Started
 
-The only things you need to run the Clojure Koans are:
+The easiest and fastest way to get the koans up and running is to [download the
+latest zip file from Github](https://github.com/functional-koans/clojure-koans/downloads).
+This way, you'll have all the dependencies you need, including Clojure itself
+and JLine, and you can skip the rest of this section (skip to "Running the
+Koans").
+
+If you're starting from a cloned or forked repo, that's cool too. This way
+you'll be able to track your progress in Git, and see how your answers compare
+to others, by checking out the project's Network tab. You might want to create your
+own branch - that way if you pull back the latest koans from master, it'll be a bit
+easier to manage the inevitable conflicts if we make changes to exercises you've already
+completed.
+
+The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- [clojure-1.3.0-alpha3.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha3.zip)
+- [clojure-1.3.0-alpha4.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha4.zip)
 
-clojure-1.3.0-alpha3.jar needs to be placed in a directory `lib` under this
-project.
+clojure-1.3.0-alpha4.jar needs to be in a directory `lib` under this project.
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
@@ -27,7 +39,7 @@ After you have leiningen installed, run
 which will download all dependencies you need to run the Clojure koans.
 
 
-### Running The Koans
+### Running the Koans
 
 To run the koans, simply run
 
@@ -40,7 +52,7 @@ You'll see something like this:
     FAIL in clojure.lang.PersistentList$EmptyList@1 (equalities.clj:1)
     We shall contemplate truth by testing reality, via equality.
     expected: (= __ true)
-      actual: (not (= nil true))
+      actual: (not (= :fill-in-the-blank true))
 
 The output is telling you that you have a failing test in equalities.clj.
 So open that file up and make it pass!  In general, you just fill in the
@@ -87,21 +99,25 @@ You can exit the REPL with `CTRL-d` on any OS.
 Patches are encouraged!  Make sure the answer sheet still passes (`script/test`,
 or `script\test` on Windows), and send a pull request.
 
-The file ideaboard.txt has lots of good places to start.  In general, patches are
-easiest if you start on a brand new idea, unless there are obvious flaws or
-omissions for existing koans.
+The file ideaboard.txt has lots of good ideas for new koans to start, or things
+to add to existing koans.  So write some fun exercises, add your answers to
+`src/path_to_answer_sheet.clj`, and we'll get them in there!
+
+Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
+have any questions or want more direction before you start pitching in.
 
 
 ### Contributors (in order of appearance)
 
 - Aaron Bedra
-- Colin Jones
+- Colin Jones (maintainer)
 - Eric Lavigne
 - Nuno Marquez
 - Micah Martin
 - Michael Kohl
 - Ben Lickly
 - Alex Robbins
+- Jaskirat Singh Veen
 
 
 ### Credits
