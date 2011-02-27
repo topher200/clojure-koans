@@ -1,15 +1,17 @@
 (defn is-even? [n]
   (if (= n 0)
-      __
-      (___ (is-even? (dec n)))))
+      true
+      (not (is-even? (dec n)))))
 
 (defn is-even-bigint? [n]
   (loop [n n acc true]
-    (if (= n 0) __
+    (if (= n 0) acc
         (recur (dec n) (not acc)))))
 
 (defn factorial [n]
-  __)
+  (loop [n n product 1]
+    (if (= n 1) product
+      (recur (dec n) (* product n)))))
 
 (meditations
   "Recursion ends with a base case"
